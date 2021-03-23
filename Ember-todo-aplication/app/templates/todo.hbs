@@ -1,0 +1,10 @@
+{{page-title "Todo"}}
+
+<h1>Lista de Tarefas Ember</h1>
+
+<ul>
+  {{#each model as |item|}}
+    <Item @name={{item.name}} @checked={{item.done}} />
+  {{/each}}
+</ul>
+<Input @value={{text}} @enter={{action "update" }} placeholder='Enter a new task' />
